@@ -1,0 +1,250 @@
+<!DOCTYPE html> <!--Declara ser HTML versão 5-->
+<html lang="pt-br"> <!-- Inicia ciclo de Programação HTML com idioma da pagina em PT-BR-->
+	<head> <!-- Inicia a parte dos titulos-->
+		<meta charset="utf-8"> <!-- Caracteres em portugues brasileiro-->
+		<meta name="viewport" content="width=device-width, initial-scale=-1,0"> <!-- Enxerga o tamanho da tela do dispositivo-->
+		<title>index</title> <!-- Titulo da pagina que é exibido na barra de titulo dos navegadores-->	
+		<style> <!-- Estilo a ser usado/CSS-->
+		div {			
+				background-image: url('Image_0001.jpg'); <!-- Só funciona na mesma pasta -->
+				filter: blur(8px);
+				-webkit-filter: blur(8px);
+		}
+			
+		body{
+				
+				background-image: url('Image_0001.jpg'); <!-- Só funciona na mesma pasta -->
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				
+				
+		}
+		
+			
+		h1{
+			color: black;
+			font-family: arial;
+			font-size: 4vw;
+			text-align: center;
+		}
+		
+		
+		
+		p{
+			color: white;
+			font-family: arial;
+			font-size: 1.5vw;
+			text-align: center;		
+		
+		}
+		
+		img { 
+			width: 100%;
+		}
+		#image {
+			width: 50%;
+			border: 4px solid white;
+			display: block:
+			margin-left: 10vw;
+			margin-right: auto;
+		}
+		
+		.cor {
+			color: gray;
+		}
+				
+		
+		.caixa {
+			position: relative;
+		}
+		.caixa .caixatexto {
+			position: relative;
+			width: 100px;
+			background: #cccccc; 
+			border: 10px solid #ffffff; 
+			margin: 0 auto; 
+			text-align: center; /* centraliza o texto */
+			padding: 12px 24px; /* respiro em volta do texto */
+			font-family: arial, sans-serif;
+			font-size: 25px;
+			color: #000000; /* texto cinza escuro */ 
+			opacity: 0.7;
+			z-index: 2; /* na frente da linha */
+		}
+
+		.caixa:before {
+			position: absolute; /* posição relativa ao container */
+			top: 50%; /* posição vetical: bem na metade */
+			content: "";
+			display: block;
+			width: 100%;
+			z-index: 1; /* atrás do box do mês */
+		}
+		
+		ul{
+		width: 1370px;
+		list-style: none;
+		display: flex;
+		margin: 100px auto;		
+		}
+		
+		
+		.min{
+		width: 200px;
+		padding: 10px;
+		}
+		
+		.lbox{
+			visibility: hidden;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+		}
+		
+		.lbox:target{
+			opacity: 1;
+			visibility: visible;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(10,10,10,0.7);
+			position: fixed;
+		}
+		
+		.box_img{
+		width: 1000px;
+		margin: 150px auto;
+		opacity: 1;
+		}
+		
+		.btn{
+		color: #ffffff;
+		font-family: Arial, Hevetica, sans-serif;
+		text-decoration: none;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		font-size: 40px;
+		text-align: center;
+		}
+		
+		#prev{
+		left: 5%;
+		top: 45%;
+		}
+		
+		#next{
+		right: 5%;
+		top: 45%;
+		}
+		
+		#close{
+		top: 0%;
+		right: 2%;
+		}
+		.box_img img{
+		opacity: 0;
+		}
+		.lbox:target .box_img img{
+		opacity: 1;
+		transition: opacity 0.4s linear;
+		}
+		
+		.video_centro{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		}
+		
+		
+		</style> <!-- Fim da parte dos Estilo/CSS-->
+	</head> <!-- Fim da parte dos titulos-->
+
+	<body> <!-- Inicia a parte do corpo-->
+		<div class="caixa">
+			<div class="caixatexto">Portfólio</div>
+		</div>
+		<br>
+		<br><p>Projetos feitos no Sketchup</p><br> 
+		<br>
+		<ul>
+			<li><a href="#img1"><img src="IMG\Image_0003.png"class="min"></li>
+			<li><a href="#img2"><img src="IMG\Image_0004.png"class="min"></li>	
+			<li><a href="#img3"><img src="IMG\Image_0005.png"class="min"></li>	
+			<li><a href="#img4"><img src="IMG\Image_0006.png"class="min"></li>	
+			<li><a href="#img5"><img src="IMG\Image_0007.png"class="min"></li>	
+			<li><a href="#img6"><img src="IMG\Image_0008.png"class="min"></li>	
+		</ul>
+		<br>
+		
+				
+		<div class="lbox" id="img1">
+			<div class="box_img">
+				<a href="" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0003.png">
+				<a href="#img2" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		<div class="lbox" id="img2">
+			<div class="box_img">
+				<a href="#img1" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0004.png">
+				<a href="#img3" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		<div class="lbox" id="img3">
+			<div class="box_img">
+				<a href="#img2" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0005.png">
+				<a href="#img4" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		<div class="lbox" id="img4">
+			<div class="box_img">
+				<a href="#img3" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0006.png">
+				<a href="#img5" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		<div class="lbox" id="img5">
+			<div class="box_img">
+				<a href="#img4" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0007.png">
+				<a href="#img6" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		<div class="lbox" id="img6">
+			<div class="box_img">
+				<a href="#img5" class="btn" id="prev">&#171;</a>
+				<a href="" class="btn" id="close">X</a>
+				<img src="IMG\Image_0008.png">
+				<a href="" class="btn" id="next">&#187;</a>
+			</div>	
+		</div>
+		
+		<br>
+		<br>
+		<br><p>Video Projeto Integrador</p><br> 
+		<br>	
+		<br>
+		<!--<div align="center"><embed src="MP4\Video_Arkai.mp4" autostart="false" height="720" width="1080" /></div>-->
+		
+		<div align="center">			
+			<video width="90%" autoplay="false" controls>
+				  <source src="MP4\Video_Arkai.mp4" type="video/mp4">
+			</video>
+		</div>
+		
+				
+	</body> <!-- FIm da parte do corpo-->
+
+</html>
